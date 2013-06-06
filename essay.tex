@@ -1,10 +1,11 @@
 \documentclass[conference]{IEEEtran}
+\setlength{\parskip}{0.75em}
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 \begin{document}
 
-\title{SOFTENG 761 Agile Essay}
+\title{Challenges of Self Organization\\in Agile Projects}
 
 
 \author{\IEEEauthorblockN{Andrew Hughson}
@@ -17,23 +18,159 @@ ahug048, 1546814}}
 
 
 \begin{abstract}
-
+Agile is a thingy
 \end{abstract}
 
 
-\section{Introduction}
+\section{Introduction} This is the introduction test
 
 
-\subsection{Subsection Heading Here}
+\section{Related Work}
+RESEARCH STUFF
 
 
-\subsubsection{Subsubsection Heading Here}
+\section{Project Experience}
+
+The project we undertook from Orion Health was a streamlined check in system
+which we dubbed ``Vital Stats Manager'' or ``VSM'' which is intended to replace
+paper forms when arriving at a hospital check in. The system consists of four
+major components, three of which we tackled over four sprints. These components
+are the VSM Android Application, the VSM NFC Receiver, the VSM Server and API,
+and the VSM Web Application.
+
+The VSM Android Application is intended to be distributed and installed on
+patient's Android devices. It consists of a form which replaces the paper form
+normally filled out when checking in to a hospital. This form allows patients to
+enter their vital medical information, such as their height, weight, allergies,
+etc.
+
+The VSM NFC Receiver is the component of the system which was not fully
+developed over the four sprints of the project due to limitations in the
+availability of required NFC hardware. For the purposes of the project a mock
+receiver was developed as an Android application, though the user interface was
+not a focus. The role of this component is to receive patient check ins. At the
+reception of each hospital department it is envisioned that there will be one of
+these receivers which a patient can touch with their Android device with the VSM
+Android Application installed. By touching the receiver they transmit their
+vital information to the hospital and are checked in.
+
+The VSM Server and API component is the component which receives, stores, and
+exposes patient check ins. When a patient checks in by transmitting their vital
+information over NFC to the receiver, the receiver uploads the received data to
+the server which stores it in a database. This information is then exposed via a
+RESTful API for consumption by other components of the system.
+
+The VSM Web Application is the main consumer of the data exposed by the VSM
+Server and API. It is intended that receptionists and nurses can see recent
+check ins to a department and review and edit patient vital information as
+patients check in to the hospital. It provides functions to search, filter, edit
+and delete patients.
+
+The team for this project consisted of six members; myself, Michael Little,
+Jourdan Harvey, Dave Carpenter, Andrew Luey, and Thomas Lugnet. This team was
+self assembled before the project requirements were available. Each member was
+familiar with the others and had differing degrees of software development
+experience.
+
+After receiving the project description and before our first meeting with our
+customer representatives we decided to work on a prototype of the system based
+on our understanding of the requirements. This gave the team an opportunity to
+research and familiarize themselves with the technologies which would be used to
+develop the final working system.
+
+At our first meeting with our customer representatives we clarified the project
+requirements and realised our understanding was not complete. Fortunately our
+prototypes of the system components were modifiable to the point where this was
+not a large concern and our technology choices were not affected. Here we see an
+example of the way Agile teams can react more easily to changes in requirements,
+due to the short iterations and frequent customer interaction our software was
+able to adapt easily.
+
+After gathering the requirements from our first meeting with our customer
+representatives we self organised into pairs roughly mapping to the three
+components which we were to implement. Particular members of our team had more
+experience in different areas of development. This was important with regard to
+the manner in which we self organised. Dave and myself had experience in back
+end development relevant to the Server and API, Michael had experience in
+Android development, and Dave, Jourdan and I had experience in web front end
+development.
+
+To encourage our team members to become ``masters of all trades'' and avoid too
+much specialisation we organised pairs so that a member with experience in the
+area of the system they were developing was paired with a member with less or no
+experience in that area. By practising pair programming members were able to
+learn about the technologies and the implementation details of the part of the
+system on which they were working. In this manner we avoided any one team member
+becoming a specialist, though there was a certain level of skill segregation
+amongst the team. This can be attributed to the time constraints of the project
+and the need to learn new technologies. We were unable to sacrifice the time to
+let all users spend time learning each of the myriad technologies employed
+across the three components of our system.
+
+Three pairs ended up forming - myself and Andrew Luey worked on the VSM Server
+and API. I had experience in developing RESTful APIs backed by databases similar
+to the way this component was going to work. Michael had previous Android
+development experience and so Jourdan and Michael worked on the VSM Android
+Application. Dave had some limited experience in web development and so Dave and
+Thomas worked on the VSM Web Application.
+
+Despite certain members having relevant experience, the specific technologies we
+chose were not necessarily familiar. Those members with experience could more
+easily pick up these new technologies and therefore expedite the learning of
+those less experienced members. For example, we used an ORM called SQLAlchemy to
+interface with our database in the VSM Server component. I was able to quickly
+pick up this technology from my previous experience with different ORMs and in
+the process teach Luey the important aspects necessary for the development of
+our system.
+
+Over the development of the project we had roughly weekly meetings with our
+customer representatives from Orion Health - that is two meetings per sprint. As
+Agile practitioners themselves they acted as mentors as well as customers.
+
+In their role as mentors they advocated certain Agile practices to us -
+especially test driven development. We managed to incorporate this technique
+more and more as our software stabilised and we became more familiar with the
+technologies we were using.
+
+As customers our representatives at Orion provided us with the requirements for
+the project. As the project progressed and we completed the original user
+stories and met milestones they would add requirements to the project. Here we
+see another example of Agile methodologies and the way requirements can change
+and planning can occur at late stages of the project, as opposed to more
+prescriptive methodologies in which changes may be more difficult to
+incorporate.
+
+Some examples of late requirements added by our customers were the additions of
+department log ons and breadcrumbs. The customers asked for the ability to
+separate patients by departments and let nurses and administrative staff see
+only those patients from specific departments. This requirement was added in the
+fourth sprint of the project after we had become familiar with our code and the
+technologies we were using. This gave us an opportunity to practice TDD. The
+main change had to occur in the server where we needed to change the way
+patients were accessed to limit them to departments. We were able to add tests
+which would verify the correctness of our implementation and then implement the
+changes. From this we saw the value of the red-green-refactor cycle.
+
+The second requirement - the addition of breadcrumbs to the web interface - was
+also introduced in the fourth sprint. At this point we were able to become more
+cross functional as a team as we had overcome the learning phase. As a result I
+was able to work on this requirement which was outside of the VSM Server
+component I had been mainly responsible for up to this point. Given more time I
+can see how this could have occurred in other places in the project as work
+would run out in specific areas and members would be required to undertake tasks
+in unfamiliar areas of the code base.
+
+
+\section{Discussion}
+
+
+\section{Implications for Practice}
 
 
 \section{Conclusion}
 
 
-\section*{Acknowledgment}
+\section*{Acknowledgement}
 
 
 \begin{thebibliography}{1}
