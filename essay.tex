@@ -22,12 +22,21 @@ Agile is a thingy
 \end{abstract}
 
 
-\section{Introduction} This is the introduction test
+\section{Introduction}
 
+Agile methodologies have seen significant adoption in industry since the release
+of the Agile Manifesto \cite{fowler2001agile} in 2001. One of the key principles
+of Agile is self-organising teams. Specifically, the manifesto states that ``The
+best architectures, requirements, and designs emerge from self-organizing
+teams.'' \cite{fowler2001agile}
+
+What is not clear is how self-organizing teams organize themselves
+\cite{hoda2010organizing}. This essay intends to examine literature on this
+topic and relay the experiences gained whilst conducting an Agile project in the
+context of a university paper in cooperation with an industry partner.
 
 \section{Related Work}
-RESEARCH STUFF
-
+//todo
 
 \section{Project Experience}
 
@@ -156,9 +165,34 @@ also introduced in the fourth sprint. At this point we were able to become more
 cross functional as a team as we had overcome the learning phase. As a result I
 was able to work on this requirement which was outside of the VSM Server
 component I had been mainly responsible for up to this point. Given more time I
-can see how this could have occurred in other places in the project as work
+can see how this could have occurred in other places with other members as work
 would run out in specific areas and members would be required to undertake tasks
 in unfamiliar areas of the code base.
+
+The tool we used throughout development for organising work was GitHub. GitHub
+acts as a source control repository and issue tracker. The issue tracker allowed
+us to add tasks to certain milestones and assign them to members. It also
+allowed us to implement code reviews through a feature called ``pull requests.''
+
+The issue tracker was used as the mechanism for which work was distributed
+throughout the team. At the beginning of an iteration after our sprint planning
+and retrospective we would create issues which represented the tasks which we
+intended to complete in that iteration. These tasks were then available to be
+picked up by any member who wished to undertake them. Issues were also logged as
+development occurred and new requirements were recognised or bugs found. For
+example, while developing the NFC Receiver which would upload patient
+information to the server, Michael and Jourdan would identify bugs and issues
+they had with the RESTful API. By logging these on GitHub everyone would receive
+an email with the bug report, allowing anyone to pick up and comment on the bug.
+
+``Pull requests'' are the key feature of GitHub which democratise code reviews.
+Whenever a feature or bug fix was finished on a branch, a member could open a
+pull request, requesting their code be integrated into the master branch.
+Members would then receive an email detailing the code changes and are able to
+discuss the changes, comment on specific lines of code, add their own commits to
+the changes, and eventually approve the pull request for merging. GitHub
+themselves uses these features to practice self-organization and code review
+{REF}.
 
 
 \section{Discussion}
@@ -173,13 +207,8 @@ in unfamiliar areas of the code base.
 \section*{Acknowledgement}
 
 
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{essay}
 
 
 \end{document}
