@@ -41,7 +41,7 @@ What is not clear is how self-organising teams organize themselves
 topic and relay the experiences gained whilst conducting an Agile project in the
 context of a university paper in cooperation with an industry partner.
 
-\section{Related Work}
+\section{Related Work}\label{relwork}
 
 Despite the widespread adoption of Agile practices throughout the software
 development community, little work has been done in the academic arena with
@@ -108,7 +108,7 @@ Ideally in an Agile team every member is a master of all trades, though
 realistically there is some level of specialisation due to constraints on
 resources and time.
 
-The advantages of cross fertilization come when members cross-fertilize across
+The advantages of cross-fertilization come when members cross-fertilize across
 functional roles and cross technical areas of expertise
 \cite{hoda2010balancing}.
 
@@ -155,27 +155,52 @@ teams which are servicing an offshore customer \cite{hoda2010organizing}, as it
 is impractical for the entire team to maintain close contact with a customer
 which is overseas.
 
-The \emph{translator}
+The \emph{translator} translates the requirements gathered by the co-ordinator
+from the language of the business domain of the customer into language more
+easily understood by the team. They also translate technical language used by
+the team into terms more easily understood by the customer. The translator and
+the  co-ordinator are often played by the same person in a team.
 
+The \emph{champion} acts as an Agile evangelist to the senior management within
+the organisation the team belongs to. Without the support from senior management
+Agile teams often fail as they are not allowed the necessary autonomy to
+flourish \cite{hoda2010balancing}.
 
+The \emph{promoter} acts as an Agile evangelist to the customers. Agile methods
+require a more significant input from the customer than traditional development
+methods. This is important as it helps to produce software closer to what the
+customer actually wants. The promoter helps the customer to understand Agile
+practices and the importance of their involvement in the project.
 
-\section{Project Experience}
+The \emph{terminator} identifies team members which are having a negative impact
+on the productivity of the team. It is sometimes the case that even well
+qualified team members do not adapt well to Agile methodologies. It is the
+responsibility of the terminator to identify and remove unproductive team
+members even without vocalisation of dissent from within the team.
 
-The project we undertook from Orion Health was a streamlined check in system
+These roles were found to arise organically among the studied teams practising
+Agile methodologies. Due to the nature of the study the findings are no
+necessarily generalisable to the greater population of Agile teams, yet the
+identification of these roles helps provide some insight into the way self-
+organising teams organise.
+
+\section{Project Experience}\label{projexp}
+
+The project we undertook from Orion Health is a streamlined check in system
 which we dubbed ``Vital Stats Manager'' or ``VSM'' which is intended to replace
 paper forms when arriving at a hospital check in. The system consists of four
 major components, three of which we tackled over four sprints. These components
 are the VSM Android Application, the VSM NFC Receiver, the VSM Server and API,
 and the VSM Web Application.
 
-The VSM Android Application is intended to be distributed and installed on
-patient's Android devices. It consists of a form which replaces the paper form
-normally filled out when checking in to a hospital. This form allows patients to
-enter their vital medical information, such as their height, weight, allergies,
-etc.
+The VSM Android Application \cite{vsmdrd} is intended to be distributed and
+installed on patient's Android devices. It consists of a form which replaces the
+paper form normally filled out when checking in to a hospital. This form allows
+patients to enter their vital medical information, such as their height, weight,
+allergies, etc.
 
-The VSM NFC Receiver is the component of the system which was not fully
-developed over the four sprints of the project due to limitations in the
+The VSM NFC Receiver \cite{vsmnfc} is the component of the system which was not
+fully developed over the four sprints of the project due to limitations in the
 availability of required NFC hardware. For the purposes of the project a mock
 receiver was developed as an Android application, though the user interface was
 not a focus. The role of this component is to receive patient check ins. At the
@@ -184,17 +209,18 @@ these receivers which a patient can touch with their Android device with the VSM
 Android Application installed. By touching the receiver they transmit their
 vital information to the hospital and are checked in.
 
-The VSM Server and API component is the component which receives, stores, and
-exposes patient check ins. When a patient checks in by transmitting their vital
-information over NFC to the receiver, the receiver uploads the received data to
-the server which stores it in a database. This information is then exposed via a
-RESTful API for consumption by other components of the system.
+The VSM Server and API \cite{vsmsvr} component is the component which receives,
+stores, and exposes patient check ins. When a patient checks in by transmitting
+their vital information over NFC to the receiver, the receiver uploads the
+received data to the server which stores it in a database. This information is
+then exposed via a RESTful API for consumption by other components of the
+system.
 
-The VSM Web Application is the main consumer of the data exposed by the VSM
-Server and API. It is intended that receptionists and nurses can see recent
-check ins to a department and review and edit patient vital information as
-patients check in to the hospital. It provides functions to search, filter, edit
-and delete patients.
+The VSM Web Application \cite{vsmsvr} is the main consumer of the data exposed
+by the VSM Server and API. It is intended that receptionists and nurses can see
+recent check ins to a department and review and edit patient vital information
+as patients check in to the hospital. It provides functions to search, filter,
+edit and delete patients.
 
 The team for this project consisted of six members; myself, Michael Little,
 Jourdan Harvey, Dave Carpenter, Andrew Luey, and Thomas Lugnet. This team was
@@ -202,19 +228,19 @@ self assembled before the project requirements were available. Each member was
 familiar with the others and had differing degrees of software development
 experience.
 
-After receiving the project description and before our first meeting with our
-customer representatives we decided to work on a prototype of the system based
-on our understanding of the requirements. This gave the team an opportunity to
-research and familiarize themselves with the technologies which would be used to
-develop the final working system.
+% After receiving the project description and before our first meeting with our
+% customer representatives we decided to work on a prototype of the system based
+% on our understanding of the requirements. This gave the team an opportunity to
+% research and familiarize themselves with the technologies which would be used to
+% develop the final working system.
 
-At our first meeting with our customer representatives we clarified the project
-requirements and realised our understanding was not complete. Fortunately our
-prototypes of the system components were modifiable to the point where this was
-not a large concern and our technology choices were not affected. Here we see an
-example of the way Agile teams can react more easily to changes in requirements,
-due to the short iterations and frequent customer interaction our software was
-able to adapt easily.
+% At our first meeting with our customer representatives we clarified the project
+% requirements and realised our understanding was not complete. Fortunately our
+% prototypes of the system components were modifiable to the point where this was
+% not a large concern and our technology choices were not affected. Here we see an
+% example of the way Agile teams can react more easily to changes in requirements,
+% due to the short iterations and frequent customer interaction our software was
+% able to adapt easily.
 
 After gathering the requirements from our first meeting with our customer
 representatives we self organised into pairs roughly mapping to the three
@@ -229,13 +255,11 @@ To encourage our team members to become ``masters of all trades'' and avoid too
 much specialisation we organised pairs so that a member with experience in the
 area of the system they were developing was paired with a member with less or no
 experience in that area. By practising pair programming members were able to
-learn about the technologies and the implementation details of the part of the
-system on which they were working. In this manner we avoided any one team member
-becoming a specialist, though there was a certain level of skill segregation
-amongst the team. This can be attributed to the time constraints of the project
-and the need to learn new technologies. We were unable to sacrifice the time to
-let all users spend time learning each of the myriad technologies employed
-across the three components of our system.
+undergo cross-fertilization, learning about the technologies and the
+implementation details of the part of the system on which they were working. In
+this manner we avoided any one team member becoming a specialist, though there
+was a difficulty in balancing our self-transcendence. This can be attributed to
+the time constraints of the project and iteration pressure that this caused.
 
 Three pairs ended up forming - myself and Andrew Luey worked on the VSM Server
 and API. I had experience in developing RESTful APIs backed by databases similar
@@ -247,15 +271,16 @@ Thomas worked on the VSM Web Application.
 Despite certain members having relevant experience, the specific technologies we
 chose were not necessarily familiar. Those members with experience could more
 easily pick up these new technologies and therefore expedite the learning of
-those less experienced members. For example, we used an ORM called SQLAlchemy to
-interface with our database in the VSM Server component. I was able to quickly
-pick up this technology from my previous experience with different ORMs and in
-the process teach Luey the important aspects necessary for the development of
-our system.
+those less experienced members. As an example of this cross-fertilization, we
+used an ORM called SQLAlchemy to interface with our database in the VSM Server
+component. I was able to quickly pick up this technology from my previous
+experience with different ORMs and in the process teach Luey the important
+aspects necessary for the development of our system.
 
 Over the development of the project we had roughly weekly meetings with our
 customer representatives from Orion Health - that is two meetings per sprint. As
-Agile practitioners themselves they acted as mentors as well as customers.
+Agile practitioners themselves they took on the mentor role as well as the role
+of translator.
 
 In their role as mentors they advocated certain Agile practices to us -
 especially test driven development. We managed to incorporate this technique
@@ -263,10 +288,12 @@ more and more as our software stabilised and we became more familiar with the
 technologies we were using.
 
 As customers our representatives at Orion provided us with the requirements for
-the project. As the project progressed and we completed the original user
-stories and met milestones they would add requirements to the project. Here we
-see another example of Agile methodologies and the way requirements can change
-and planning can occur at late stages of the project, as opposed to more
+the project. As developers themselves they were able to translate the domain
+knowledge from the health industry to more consumable information for us as
+developers. As the project progressed and we completed the original user stories
+and met milestones they would add requirements to the project. Here we see
+another example of Agile methodologies and the way requirements can change and
+planning can occur at late stages of the project, as opposed to more
 prescriptive methodologies in which changes may be more difficult to
 incorporate.
 
@@ -306,26 +333,134 @@ information to the server, Michael and Jourdan would identify bugs and issues
 they had with the RESTful API. By logging these on GitHub everyone would receive
 an email with the bug report, allowing anyone to pick up and comment on the bug.
 
+The GitHub issue tracker was the key to our team's balance of autonomy and
+responsibility. GitHub also has a feature that tracks the number of lines and
+commits to a repository by a user. These two features combined provided the
+mechanism and the motivation to be responsible while also being autonomous. As
+an analogue to the story board it has an advantage because it does not require
+the team to be co-located, a great advantage to us due to our scheduling
+conflicts.
+
 ``Pull requests'' are the key feature of GitHub which democratise code reviews.
 Whenever a feature or bug fix was finished on a branch, a member could open a
-pull request, requesting their code be integrated into the master branch.
-Members would then receive an email detailing the code changes and are able to
-discuss the changes, comment on specific lines of code, add their own commits to
-the changes, and eventually approve the pull request for merging. GitHub
-themselves uses these features to practice self-organization and code review
-{REF}.
+pull request, requesting their code be integrated into the master branch. All
+other members would then receive an email and are able to discuss the changes,
+comment on specific lines of code, add their own commits to the changes, and
+eventually approve the pull request for merging. This feature was also part of
+helping the team to maintain cross-functionality as it made it easy to monitor
+the changes to the system as the code developed.
 
 
 \section{Discussion}
 
+Many of the concepts from section \ref{relwork} came to bear throughout the
+experience of developing Vital Stats Manager in co-operation with Orion Health.
+
+\subsection{Balance}
+
+With regards to balancing, we did well when it came to autonomy and cross-
+fertilization, though we did face challenges with self-transcendence.
+
+In the role of senior management, Dr. Rashina Hoda provided our group with the
+freedom to practice autonomy. Because of our social connection with one another,
+the tools provided to us by GitHub and the mentorship of our customer
+representatives we were able to balance this freedom responsibly and do a fair
+amount of work evenly distributed among the team during each iteration.
+
+I have described in section \ref{projexp} how through practising pair
+programming and through using GitHub's pull request tool we were able to cross-
+fertilize across functional roles. Given more time I would have expected this
+balance to improve as we managed to cross-fertilize across areas of technical
+expertise, allowing members to become more cross-functional.
+
+The main challenge we faced throughout the project was iteration pressure. The
+technologies used in this project were largely new to all of us and so required
+an investment in time to practice continuous learning. With the limited time
+available to work on the project this led to iteration pressures which created a
+larger degree of specialisation than would be otherwise optimal. This resulted
+in the creation of the three subgroups. As stated earlier this was mitigated in
+later iterations as the burden of continuous learning on our time constraints
+lessened.
+
+\subsection{Roles}
+
+Not all of the roles which were identified by Hoda et al.
+\cite{hoda2010organizing} were evident in our experience of Agile. Particularly,
+nobody took on the roles of champion, promoter, or terminator, largely due to
+the setting in which the project was undertaken. Agile was a given for this
+project and a mechanism was not available to ``terminate'' somebody from the
+group.
+
+As stated in section \ref{projexp} our customer representatives undertook the
+role of mentors. As Agile practitioners themselves they would ask us about the
+aspects of the methodologies that we were using and which we found most useful.
+They also reiterated the importance of agile practises, particularly sprint
+planning and retrospectives and TDD.
+
+Our customer representatives also undertook the role of translators. As software
+developers in the field of health software they were uniquely poised to help
+translate the business needs of hospitals into terms which were easy to grasp
+for us as software developers. A particular example of this is ``vital
+statistics.'' On hearing this term initially we assumed it meant things such as
+heart rate, body temperature, etc. This was clarified for us by our translators
+as meaning the information your provide when you check in to a hospital.
+
+A not insignificant portion of our communication with our customer
+representatives was undertaken via email. To reduce complexity Dave Carpenter
+was nominated as customer liaison and undertook the role of co-ordinator. Any
+clarifications we required or extra communication went though Dave in this role.
+Having this single point of contact smoothed our relations with the customers
+and made it easy to know where to go when further information was needed.
 
 \section{Implications for Practice}
 
+The key pieces of knowledge to take from our experiences with Agile in the
+context of the concepts outlined in section \ref{relwork} are as follows:
+
+\begin{itemize}
+
+  \item Have senior management which is supportive of Agile and provides the
+necessary freedom.
+
+  \item Use tools which support the balances of autonomy and cross-
+fertilization.
+
+\end{itemize}
+
+If senior management is not in support of the project and does not provide the
+necessary freedom to the team, it may be a good idea to employ the role of
+champion. The balance of autonomy was key to the success of the Vital Stats
+Manager project. The ability to self-organise without worrying about pleasing
+upper management (the lecturer) contributed greatly to the feeling of ownership
+that the team had for the project, greatly improving the amount of effort put in
+and the quality of the final product.
+
+GitHub was another key component to the success of the project. Its features
+provided a platform on which our team was able to perform the balancing act
+required for a successful project. As a tool GitHub allows a team to practice
+Agile processes without being strongly process oriented. The issue tracker is a
+great aid to a team's autonomy, while the pull request feature keeps everyone in
+the loop on new features, which is surprisingly important to the process of
+cross-fertilization.
 
 \section{Conclusion}
 
+As we have seen, the organisation of self-organising teams is a balancing act
+across the three features of autonomy, cross-fertilization and self-
+transcendence.
+
+With the support of senior management and the proper employment of Agile roles
+a self-organised team can be very productive, given the sense of ownership they
+gain via cross-functionality and autonomy.
+
 
 \section*{Acknowledgement}
+
+I would like to thank the members of Best Group for their contributions to the
+Vital Statistics Manager project. I would also like to thank our mentors from
+Orion Health for their guidance and advice throughout the project. Finally I
+would like to thank Dr. Rashina Hoda and Mr. Howard Wang for running the course
+this semester.
 
 
 \bibliographystyle{IEEEtran}
