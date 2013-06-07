@@ -1,6 +1,6 @@
 \documentclass[conference]{IEEEtran}
-\setlength{\parskip}{0.75em}
-
+\setlength{\parskip}{0.5em}
+\usepackage{graphicx}
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 \begin{document}
@@ -25,18 +25,139 @@ Agile is a thingy
 \section{Introduction}
 
 Agile methodologies have seen significant adoption in industry since the release
-of the Agile Manifesto \cite{fowler2001agile} in 2001. One of the key principles
+of the Agile Manifesto \cite{agileadoption} in 2001. One of the key principles
 of Agile is self-organising teams. Specifically, the manifesto states that ``The
-best architectures, requirements, and designs emerge from self-organizing
+best architectures, requirements, and designs emerge from self-organising
 teams.'' \cite{fowler2001agile}
 
-What is not clear is how self-organizing teams organize themselves
+Self-organising teams are teams which autonomously distribute work among their
+members without intervention from upper management. They are composed of
+``individuals [that] manage their own workload, shift work among themselves
+based on need and best fit, and participate in team decision
+making \cite{highsmith2009agile}.''
+
+What is not clear is how self-organising teams organize themselves
 \cite{hoda2010organizing}. This essay intends to examine literature on this
 topic and relay the experiences gained whilst conducting an Agile project in the
 context of a university paper in cooperation with an industry partner.
 
 \section{Related Work}
-//todo
+
+Despite the widespread adoption of Agile practices throughout the software
+development community, little work has been done in the academic arena with
+respect to the Agile feature of self-organising teams \cite{hoda2010balancing}.
+
+\subsection{Balance}
+
+One feature of self-organising teams that has been identified in the literature
+is the balancing act that must occur in an Agile organisation. Three specific
+conditions of self-organisation were identified by Nonaka et al.
+\cite{takeuchi1986new} as being the balance of autonomy, cross-fertilization,
+and self-transcendence.
+
+\begin{figure}[h!]   \centering
+\includegraphics[width=0.5\textwidth]{balancing.png}   \caption{Relationship
+between the Balancing Acts and the fundamental conditions of self-organisation
+\cite{hoda2010balancing}.} \end{figure}
+
+In a prescriptive software development process senior management is responsible
+for setting the goals of the team. Managers assign tasks to specific team
+members and perform evaluations of performance and productivity. This stems from
+the hierarchical nature of traditional organizations and does not allow
+developers to take ownership of the project on which they are working.
+
+In contrast, Agile teams allow members to take ownership of the project on which
+they are working by letting them guide development through Agile processes. This
+requires Agile teams to be given freedom by upper management to take
+responsibility for their project. By giving ownership of the project to the
+team, senior management is encouraging members to have a greater sense of
+responsibility for the project and hence be more motivated to produce higher
+quality work.
+
+With ownership of the project there also comes the freedom to make decisions
+about that project, and the responsibility to make good decisions. Agile
+facilitates this freedom through certain practices such as sprint planning,
+the story board, and sprint retrospectives.
+
+During sprint planning team members have the freedom to decide the direction of
+the project for that iteration in terms of what features and work will be done.
+The team also has the responsibility to not make a plan which is in the best
+interests of the project rather than in their own best interests.
+
+Team members also have the freedom to choose their own tasks from the story
+board. Here team members have the freedom to practice autonomy by making their
+own decisions about which tasks to pick up. The team must also act responsibly
+and not choose only easy and low priority tasks from the task board. Fortunately
+the transparent nature of the board discourages this through the social pressure
+imposed by the need to meaningfully contribute.
+
+The team also has the freedom to reflect and improve on their processes at the
+sprint retrospective. Here the team must act responsibly by proactively
+identifying their weaknesses and areas of improvement.
+
+If members of a team fail to act responsibly it is the responsibility of senior
+management or a Terminator \cite{hoda2010organizing} to identify those members
+and discipline or remove from a team. This responsibility also requires
+balancing as too much interference from management can jeopardise the ownership
+a team feels towards their project \cite{hoda2010balancing}.
+
+An Agile team must also balance its level of cross-fertilization. According to
+Nonaka et al. cross fertilization requires a team to consist of members of
+``varying functional specialisations'' which must interact and work together.
+Ideally in an Agile team every member is a master of all trades, though
+realistically there is some level of specialisation due to constraints on
+resources and time.
+
+The advantages of cross fertilization come when members cross-fertilize across
+functional roles and cross technical areas of expertise
+\cite{hoda2010balancing}.
+
+By cross-fertilizing across functional roles teams can be more adaptive to a
+changing workload and can cross barriers between functional specialisations. For
+example, having a mix of functional roles can allow developers and testers to
+work with one another, whereas when working separately they can often feel as
+though they are working against one another.
+
+Cross-fertilizing across technical areas of expertise allows for a greater
+collective ownership of the project, which is in line with the XP principle of
+collective code ownership \cite{beck1999embracing}. If multiple members of a
+team are familiar with a technology then it increases the flexibility of the
+team and helps members maintain an interest in their work.
+
+Self-transcendence is the principle that teams establish their own goals and
+practice continuous evaluation of themselves throughout a project. In Agile this
+is achieved through the practices of sprint planning and sprint retrospectives.
+Through this practice teams must balance the amount of iteration pressure with
+the level of continuous learning \cite{hoda2010balancing}.
+
+Iteration pressure is the pressure induced by time restrictions during a sprint.
+While some iteration pressure is desirable as a motivating factor, too much
+iteration pressure causes teams to eat into time that could be more productively
+spent practising continuous learning. Continuous learning is important for a
+team to remain flexible and keep innovating.
+
+\subsection{Roles}
+
+Through a Grounded Theory \cite{strauss1994grounded} study conducted using 24
+Agile practitioners in 14 different software organisations in New Zealand and
+India, six informal roles were consistently adopted by members of Agile teams
+\cite{hoda2010organizing}.
+
+The \emph{mentor} role is played by a member who guides the team through the use
+of Agile processes. Despite the simplicity of Agile processes, practising Agile
+can be difficult. The Mentor encourages the team to learn and adhere to Agile
+practices.
+
+The \emph{co-ordinator} acts as a liaison between the team and the customer. The
+co-ordinator gathers initial requirements from the customer and communicates any
+changes the customer requires. The co-ordinator is especially important for
+teams which are servicing an offshore customer \cite{hoda2010organizing}, as it
+is impractical for the entire team to maintain close contact with a customer
+which is overseas.
+
+The \emph{translator}
+
+
 
 \section{Project Experience}
 
